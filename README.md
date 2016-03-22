@@ -4,7 +4,7 @@ This repository contains Ruby API for utilizing Google's machine learning librar
 
 ## Get Started
 
-This is simple proof of concept using SWIG interface:
+Install gem dependencies:
 
 	$ bundle install
 
@@ -15,7 +15,3 @@ And then execute:
 Then test the gem:
 
     $ rake spec
-
-## Usage
-
-TODO: Write usage instructions here
