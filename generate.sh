@@ -1,0 +1,1 @@
+swig -ruby -c++ -o ext/tf/tf.cpp -module tf tensorflow.i

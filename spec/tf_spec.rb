@@ -1,11 +1,7 @@
 require 'spec_helper'
 
 describe Tf do
-  it 'has a version number' do
-    expect(Tf::VERSION).not_to be nil
-  end
-
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'has proper tensorflow version number' do
+    expect(Tf.version).to eq("0.7.1")
   end
 end
