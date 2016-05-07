@@ -1,5 +1,7 @@
 # ruby-tensorflow
 
+[![Join the chat at https://gitter.im/ankurayadav/ruby-tensorflow](https://badges.gitter.im/ankurayadav/ruby-tensorflow.svg)](https://gitter.im/ankurayadav/ruby-tensorflow?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This repository contains Ruby API for utilizing Google's machine learning library TensorFlow.
 
 ## PREREQUISITES
