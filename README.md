@@ -29,4 +29,4 @@ And then execute:
 
 Then test the gem:
 
-    $ rake spec
+    $ rake test
