@@ -1,3 +1,8 @@
+/* SWIG wrapper for all of TensorFlow native functionality.
+ * The includes are intentionally not alphabetically sorted, as the order of
+ * includes follows dependency order */
+
+%include "lib/util/port.i"
 
 %{
 #include "../../dependencies/tensorflow/tensorflow/core/public/version.h"
