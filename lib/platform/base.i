@@ -4,7 +4,7 @@
 	#include "../../dependencies/tensorflow/tensorflow/core/platform/types.h"
 	using tensorflow::uint64;
 	using tensorflow::string;
-}
+%}
 
 // SWIG macros for explicit API declaration.
 // Usage:
