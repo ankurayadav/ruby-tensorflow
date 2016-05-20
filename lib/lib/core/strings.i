@@ -2,5 +2,5 @@
 // to our string libraries.
 
 %{
-	#include "../../dependencies/tensorflow/tensorflow/core/lib/core/stringpiece.h"
+	#include "tensorflow/core/lib/core/stringpiece.h"
 %}

@@ -5,7 +5,7 @@
 %include "lib/util/port.i"
 
 %{
-#include "../../dependencies/tensorflow/tensorflow/core/public/version.h"
+#include "tensorflow/core/public/version.h"
 
 extern const char version[] = TF_VERSION_STRING;
 %}

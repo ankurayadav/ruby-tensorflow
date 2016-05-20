@@ -1,7 +1,7 @@
 %include "lib/platform/base.i"
 
 %{
-	#include "../../dependencies/tensorflow/tensorflow/core/util/port.h"
+	#include "tensorflow/core/util/port.h"
 %}
 
 %ignoreall

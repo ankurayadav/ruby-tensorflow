@@ -1830,12 +1830,12 @@ static VALUE mTf;
 #include <stdexcept>
 
 
-	#include "../../dependencies/tensorflow/tensorflow/core/platform/types.h"
+	#include "tensorflow/core/platform/types.h"
 	using tensorflow::uint64;
 	using tensorflow::string;
 
 
-	#include "../../dependencies/tensorflow/tensorflow/core/util/port.h"
+	#include "tensorflow/core/util/port.h"
 
 
 SWIGINTERNINLINE VALUE
@@ -1845,7 +1845,7 @@ SWIG_From_bool  (bool value)
 }
 
 
-#include "../../dependencies/tensorflow/tensorflow/core/public/version.h"
+#include "tensorflow/core/public/version.h"
 
 extern const char version[] = TF_VERSION_STRING;
 

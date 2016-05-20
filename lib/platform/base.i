@@ -1,7 +1,7 @@
 // Helper macros and typemaps for use in Tensorflow swig files.
 
 %{
-	#include "../../dependencies/tensorflow/tensorflow/core/platform/types.h"
+	#include "tensorflow/core/platform/types.h"
 	using tensorflow::uint64;
 	using tensorflow::string;
 %}
