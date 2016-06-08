@@ -1830,7 +1830,22 @@ static VALUE mTf;
 #include <stdexcept>
 
 
-#include "../../dependencies/tensorflow/tensorflow/core/public/version.h"
+	#include "tensorflow/core/platform/types.h"
+	using tensorflow::uint64;
+	using tensorflow::string;
+
+
+	#include "tensorflow/core/util/port.h"
+
+
+SWIGINTERNINLINE VALUE
+SWIG_From_bool  (bool value)
+{
+  return value ? Qtrue : Qfalse;
+}
+
+
+#include "tensorflow/core/public/version.h"
 
 extern const char version[] = TF_VERSION_STRING;
 
@@ -1890,6 +1905,22 @@ SWIG_FromCharPtr(const char *cptr)
 { 
   return SWIG_FromCharPtrAndSize(cptr, (cptr ? strlen(cptr) : 0));
 }
+
+SWIGINTERN VALUE
+_wrap_IsGoogleCudaEnabled(int argc, VALUE *argv, VALUE self) {
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (bool)tensorflow::IsGoogleCudaEnabled();
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
 
 SWIGINTERN VALUE
 _wrap_version_get(VALUE self) {
@@ -2171,6 +2202,7 @@ SWIGEXPORT void Init_tf(void) {
   }
   
   SWIG_RubyInitializeTrackings();
+  rb_define_module_function(mTf, "IsGoogleCudaEnabled", VALUEFUNC(_wrap_IsGoogleCudaEnabled), -1);
   rb_define_const(mTf, "TF_MAJOR_VERSION", SWIG_From_int(static_cast< int >(0)));
   rb_define_const(mTf, "TF_MINOR_VERSION", SWIG_From_int(static_cast< int >(7)));
   rb_define_const(mTf, "TF_PATCH_VERSION", SWIG_From_int(static_cast< int >(1)));
